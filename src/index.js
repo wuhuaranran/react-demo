@@ -8,7 +8,7 @@ import TextInputWithFocusButton from '../components/hooks/RefDemo';
 
 const styles = {
     content:{
-        padding: '30px',
+        padding: '20px',
         borderBottom: '1px solid'
     }
 };
