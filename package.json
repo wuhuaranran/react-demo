@@ -32,9 +32,10 @@
   "dependencies": {
     "babel-preset-react-app": "^6.1.0",
     "lodash": "^4.17.11",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2"
+    "react": "16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
+    "react-scripts": "2.0.5",
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1"
   }
 }
