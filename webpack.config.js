@@ -7,17 +7,30 @@ const theme = require('./theme');
 
 module.exports = {
     entry: {
-        app: path.resolve(__dirname, './src/index.js'),
+        app: ["babel-polyfill", path.resolve(__dirname, "src/index.js")],
         common: ['react', 'antd', 'blueimp-md5', 'whatwg-fetch', 'react-dom', 'react-redux']
     },
-    devtool: 'inline-source-map',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: true,
+        historyApiFallback: true,
+        // proxy: {
+        //     "/api": {
+        //         target: BASE_URL,
+        //         changeOrigin: true,
+        //         pathRewrite: {
+        //             "^/api": ""
+        //         }
+        //     }
+        // },
+        inline: true
     },
     mode: 'development',
     output: {
-        filename: '[name]_[hash:8].bundle.js',
+        publicPath: '/',
+        filename: 'public/js/[name].[hash:8].js',
+        chunkFilename: 'public/js/[name].[hash:8].js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [

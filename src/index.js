@@ -1,40 +1,24 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Button } from 'antd';
-import { Router, Route } from 'react-router-dom';
-import Hooks from '../components/hooks/hooks';
-import Counter from '../components/hooks/counter';
-import TextInputWithFocusButton from '../components/hooks/RefDemo';
+import { Router, Route, BrowserRouter,Switch } from 'react-router-dom';
+import createBrowserHistory from "history/createBrowserHistory";
+import routeTest from './pages/routeTest';
+import Home from './Home';
 
-const styles = {
-    content:{
-        padding: '20px',
-        borderBottom: '1px solid'
-    }
-};
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <div style={styles.content}>
-                    <h1>demo1：useState，useEffect</h1>
-                    <Hooks />
-                    <Hooks />
-                </div>
-                <div style={styles.content}>
-                    <h1>demo2：useReducer</h1>
-                    <Counter />
-                </div>
-                <div style={styles.content}>
-                    <h1>demo3：useRef</h1>
-                    <TextInputWithFocusButton />
-                </div>
-            </div>
-        );
-    }
-}
+const history = createBrowserHistory();
+// ReactDom.render(
+//     // <Provider>
+//     <App history={history} />,
+//     // </Provider>,
+//     document.getElementById('app'),
+// );
 ReactDom.render(
-    <App />,
-    document.getElementById('app'),
+    <Router history={history}>
+        <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/hooksDemo' exact component={routeTest} />
+        </Switch>
+    </Router >,
+    document.getElementById('app')
 );
 
