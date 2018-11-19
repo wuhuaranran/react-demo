@@ -9,3 +9,5 @@ const theme{//样式} module.exports = theme;
 - npm 安装这些loader
 - css loader:options: {... modifyVars: theme}
 ### 路由
+- App.js引入页面，入口页面index.js配置
+- store.js统一管理所有redux store
