@@ -2,9 +2,7 @@ import React, { PureComponent } from 'react';
 import ReactDom from 'react-dom';
 import { Button } from 'antd';
 import { Router, Route, Link } from 'react-router-dom';
-import Hooks from '../components/hooks/hooks';
-import Counter from '../components/hooks/counter';
-import TextInputWithFocusButton from '../components/hooks/RefDemo';
+import { Hooks, Counter, RefDemo } from 'components';
 
 const styles = {
     content: {
@@ -28,7 +26,7 @@ class RouteTest extends PureComponent {
                 </div>
                 <div style={styles.content}>
                     <h1>demo3：useRef</h1>
-                    <TextInputWithFocusButton />
+                    <RefDemo />
                 </div>
             </div>
         );

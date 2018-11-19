@@ -150,5 +150,14 @@ module.exports = {
                 ]
             }
         ]
+    },
+    resolve: {
+        alias: {
+            // assets: path.resolve(__dirname, 'src/assets'),
+            // images: path.resolve(__dirname, 'src/assets/images'),
+            // utils: path.resolve(__dirname, 'src/utils'),
+            pages: path.resolve(__dirname, 'src/pages'),
+            components: path.resolve(__dirname, 'src/components')
+        }
     }
 };

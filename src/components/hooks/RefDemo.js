@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Button, Input } from 'antd';
 
-function TextInputWithFocusButton() {
+function RefDemo() {
     const inputEl = useRef(null);
     const onButtonClick = () => {
     // `current` points to the mounted text input element
@@ -14,4 +14,4 @@ function TextInputWithFocusButton() {
         </div>
     );
 }
-export default TextInputWithFocusButton;
+export default RefDemo;
