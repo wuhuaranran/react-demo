@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const theme = require('./theme');
+// const { injectBabelPlugin } = require('react-app-rewired');
 
 module.exports = {
     entry: {
@@ -53,7 +54,7 @@ module.exports = {
                         [
                             'import',
                             {
-                                libraryName: 'antd-mobile',
+                                libraryName: 'antd',
                                 style: true
                             }
                         ],
@@ -67,12 +68,12 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader
+                        loader: 'style-loader'
                     },
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: false,
+                            sourceMap: true,
                             modules: true,
                             localIdentName: "[local]--[hash:base64:5]"
                         }
@@ -91,13 +92,10 @@ module.exports = {
                 include: /node_modules/,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader
+                        loader: 'style-loader'
                     },
                     {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: false
-                        }
+                        loader: 'css-loader'
                     },
                     {
                         loader: 'less-loader',
@@ -157,6 +155,7 @@ module.exports = {
             // images: path.resolve(__dirname, 'src/assets/images'),
             // utils: path.resolve(__dirname, 'src/utils'),
             pages: path.resolve(__dirname, 'src/pages'),
+            src: path.resolve(__dirname, 'src'),
             components: path.resolve(__dirname, 'src/components')
         }
     }
