@@ -116,29 +116,7 @@ module.exports = {
                             limit: 5000,
                             name: '[name].[hash:8].[ext]'
                         }
-                    }/* ,
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            },
-                            optipng: {
-                                enabled: false
-                            },
-                            pngquant: {
-                                quality: '65-90',
-                                speed: 4
-                            },
-                            gifsicle: {
-                                interlaced: false
-                            },
-                            webp: {
-                                quality: 75
-                            }
-                        }
-                    } */
+                    }
                 ]
             },
             {

@@ -11,6 +11,7 @@ class Home extends PureComponent {
             <div className={styles.content}>
                 <h1>Hello,React~</h1>
                 <Button type='primary'><Link to='/hooksDemo'>Hooks Demo</Link></Button>
+                <Button type='primary'><Link to='/Ebbinghaus'>Ebbinghaus</Link></Button>
             </div>
         );
     }

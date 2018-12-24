@@ -1,5 +1,6 @@
 # react Demo
-### src/hooks.js：Hooks useState useEffect
+### Demo1: src/hooks.js：Hooks useState useEffect
+### Demo2: src/Ebbinghaus.js：Ebbinghaus任务计划计算器
 ### eslint自动修改格式：eslint.autoFix:true
 ### 自定义全局样式：
 1. /theme/index.js: 
