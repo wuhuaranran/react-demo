@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import style from './index.less';
-import { Form, Layout, Input, Button, Timeline, h1, Table } from 'antd';
+import { Form, Layout, Input, Button, Timeline, Icon, Table } from 'antd';
 
 const FormItem = Form.Item;
 const {Header, Footer, Sider, Content} = Layout;
@@ -27,27 +27,6 @@ class Ebbinghaus extends React.Component {
                 },
             },
         };
-
-        this.data = [{
-            key: '1',
-            name: '任务1',
-            1: 1,
-            2: 0,
-            3: 1
-        }, {
-            key: '2',
-            name: 'Jim Green',
-            age: 42,
-            address: 'London No. 1 Lake Park',
-            tags: ['loser'],
-        }, {
-            key: '3',
-            name: 'Joe Black',
-            age: 32,
-            address: 'Sidney No. 1 Lake Park',
-            tags: ['cool', 'teacher'],
-        }];
-
     }
     componentDidMount() {
     }
@@ -72,8 +51,11 @@ class Ebbinghaus extends React.Component {
             result.push([]);
             columns.push({
                 title: i + 1,
-                dataIndex: i + 1,
-                key: i + 1
+                dataIndex: i,
+                key: i,
+                render: (text, record, index) => (
+                    text === 1 ? <Icon type="star" theme="twoTone" />:null
+                )
             })
         }
         taskList.map((task,index)=>{
@@ -83,19 +65,25 @@ class Ebbinghaus extends React.Component {
             result[index + 4].push(task); // 4天
             result[index + 7].push(task); // 7天
             result[index + 15].push(task); // 15天
+            dataSource[index]={
+                key: '任务' + (index + 1),
+                name: '任务' + (index + 1)
+            };
+            result.map((r,i)=>{
+                dataSource[index][i] = 0;
+                if (r.includes(task)){
+                    dataSource[index][i] = 1;
+                }
+            })
         })
-        // result.map((result,index)=>{
-        //     dataSource.push({
-
-        //     })
-        // })
         this.setState({
             result,
-            columns
+            columns,
+            dataSource
         })
     }
     render() {
-        const { result, columns } = this.state;
+        const { result, columns, dataSource } = this.state;
         const { getFieldDecorator } = this.props.form;
         return (
             <div className={style.content}>
@@ -142,7 +130,7 @@ class Ebbinghaus extends React.Component {
                 </Layout>
                 <Table 
                     columns={columns} 
-                    dataSource={this.data} 
+                    dataSource={dataSource} 
                     pagination={false}
                 />
             </div>
