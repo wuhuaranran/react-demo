@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import style from './index.less';
+import { Router, Route, Link } from 'react-router-dom';
 import { Form, Layout, Input, Button, Timeline, Icon, Table, Calendar, Badge, DatePicker } from 'antd';
 import { format } from 'path';
 import moment from 'moment';
@@ -136,6 +137,7 @@ class Ebbinghaus extends React.Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <div className={style.content}>
+                <Button type='primary'><Link to='/'>首页</Link></Button>
                 <Layout>
                     <Header><h1>Ebbinghaus</h1></Header>
                     <Layout>
