@@ -1,6 +1,4 @@
 # react Demo
-### Demo1: src/hooks.js：Hooks useState useEffect
-### Demo2: src/Ebbinghaus.js：Ebbinghaus任务计划计算器
 ### eslint自动修改格式：eslint.autoFix:true
 ### 自定义全局样式：
 1. /theme/index.js: 
@@ -16,3 +14,7 @@ const theme{//样式} module.exports = theme;
 - babelrc配置
 - webpack.config.js配置
 - npm安装用到的loader（css-loader、less-loader、style-loader）
+## Demo
+### Demo1: src/hooks.js：Hooks useState useEffect
+### Demo2: src/Ebbinghaus.js：Ebbinghaus任务计划计算器
+### Demo3: src/sky.js：sky动画插件https://github.com/lucagez/sky

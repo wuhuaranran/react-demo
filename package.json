@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.4",
     "babel-plugin-import": "^1.11.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
@@ -28,7 +28,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-react": "^7.12.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "less": "^2.7.3",

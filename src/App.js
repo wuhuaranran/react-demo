@@ -5,6 +5,7 @@ import routeTest from './pages/routeTest/index';
 import Home from './Home';
 import Ebbinghaus from './pages/Ebbinghaus/index';
 import mySky from './pages/sky/index';
+import snow from './pages/snow/index';
 
 const App = ({ history }) => (
     <Router history={history}>
@@ -13,6 +14,7 @@ const App = ({ history }) => (
             <Route exact path='/hooksDemo' exact component={routeTest} />
             <Route exact path='/Ebbinghaus' exact component={Ebbinghaus} />
             <Route exact path='/sky' exact component={mySky} />
+            <Route exact path='/snow' exact component={snow} />
         </Switch>
     </Router>
 );
